@@ -1,8 +1,17 @@
 <script>
+  import { onMount } from "svelte";
   import Header from "../components/Header.svelte";
   import Main from "../components/Main.svelte";
   import Sidebar from "../components/Sidebar.svelte";
   import TimeLine from "../components/TimeLine.svelte";
+
+  let data = {};
+  const API = "https://us-centra1-pugstagram-co.cloudfunctions.net/data";
+
+  onMount(async () => {
+    const response = await fetch(API);
+    data = await response.json();
+  });
 </script>
 
 <style>
@@ -24,6 +33,6 @@
 
 <Header />
 <Main>
-  <TimeLine />
-  <Sidebar />
+  <TimeLine posts={data.posts} />
+  <Sidebar {...data.user} />
 </Main>

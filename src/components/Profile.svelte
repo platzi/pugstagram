@@ -1,3 +1,8 @@
+<script>
+  export let nickname;
+  export let name;
+</script>
+
 <style>
   .Profile-content {
     display: flex;
@@ -29,8 +34,8 @@
       <img src="https//arepa.s3.amazonaws.com/oscar.png" alt="" />
     </div>
     <div class="Profile-info">
-      <h2>gndx</h2>
-      <span>Oscar Barajas</span>
+      <h2>{nickname}</h2>
+      <span>{name}</span>
     </div>
   </div>
 </div>
