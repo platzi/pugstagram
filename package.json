@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "webpack --mode production",
+    "start": "webpack-dev-server --open --mode development"
   },
   "author": "Oscar Barajas <oscar@platzi.com>",
   "license": "MIT",
@@ -19,6 +20,7 @@
     "html-webpack-plugin": "^3.2.0",
     "svelte-loader": "^2.13.6",
     "webpack": "^4.41.6",
-    "webpack-cli": "^3.3.11"
+    "webpack-cli": "^3.3.11",
+    "webpack-dev-server": "^3.10.3"
   }
 }
