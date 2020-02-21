@@ -6,7 +6,7 @@
   import TimeLine from "../components/TimeLine.svelte";
 
   let data = {};
-  const API = "https://us-centra1-pugstagram-co.cloudfunctions.net/data";
+  const API = "https://us-central1-pugstagram-co.cloudfunctions.net/data";
 
   onMount(async () => {
     const response = await fetch(API);
